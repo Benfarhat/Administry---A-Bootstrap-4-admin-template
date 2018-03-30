@@ -1,10 +1,10 @@
 # Création d'un thème d'administration avec Bootstrap 4
 
-Nous allons utiliser Bootstrap 4 pour essayer de mettre en place rapidement un template bootstrap pour l'administration.
+Nous allons utiliser Bootstrap 4 pour essayer de mettre en place rapidement un template bootstrap pour l'administration. Notez que l'interface sera en ltr (left to right) et rtl (right to left).
 
 ## Démarrage
 
-Créeons avant tout notre page HTML avec les appels necessaires aux fichiers [bootstrap](https://getbootstrap.com/) via leur CDN
+Créons avant tout notre page HTML avec les appels necessaires aux fichiers [bootstrap](https://getbootstrap.com/) via leur CDN
 
 
 Les fichiers de styles
@@ -77,5 +77,71 @@ Vu qu'il s'agit de personalisation, le fichier de style sera appelé après la d
 
 ### Code final du fichier de démarrage
 
+Voici le contenu de notre fichier index.html
+
+```
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap Style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <!-- Custom qtyle -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Administration</title>
+</head>
+<body>
+    
+    <!-- jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Custom scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+```
+
+## Interface
+
+Pour notre interface nous aurons besoins d'un wireframe ou mockup afin d'imaginer l'interface finale:
 
 
+-------------------------------------------------------------------------
+| TITRE  MENU 1                                                 MENU 2  |
+-------------------------------------------------------------------------
+| Message du site                                 SOUS MENU DISPONIBLE  |
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+| Chemin actuel \ breadcrumb \ fil d'ariane                             |
+-------------------------------------------------------------------------
+
+-------------  ----------------------------------------------------------
+| MENU      |  |   TITRE ACTIF                                          |
+| SS MENU 1 |  |                                                        |
+| SS MENU 2 |  |   CONTENU                                              |
+| SS MENU 3 |  |                                                        |
+| SS MENU 4 |  |                                                        |
+|           |  |                                                        |
+-------------  |                                                        |
+               |                                                        |
+               |                                                        |
+               |                                                        |
+               |                                                        |
+               |                                                        |
+               ----------------------------------------------------------
+
+-------------------------------------------------------------------------
+|                               FOOTER                                  |
+-------------------------------------------------------------------------                                 
+
+## Header
+
+Commencons par la partie de haut
