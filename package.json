@@ -1,0 +1,24 @@
+{
+  "name": "admin",
+  "version": "0.0.1",
+  "description": "Nous allons utiliser Bootstrap 4 pour essayer de mettre en place rapidement un template bootstrap pour l'administration. Notez que l'interface sera en ltr (left to right) et rtl (right to left).",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benfarhat/Tuto-bootstrap-admin-template.git"
+  },
+  "keywords": [],
+  "author": "Benfarhat Elyes <benfarhat.elyes@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Benfarhat/Tuto-bootstrap-admin-template/issues"
+  },
+  "homepage": "https://github.com/Benfarhat/Tuto-bootstrap-admin-template#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}

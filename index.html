@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-    <!-- Custom qtyle -->
+    <!-- Animated.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
+    <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css" />
-    <title>Administration</title>
+    <title>Administry | A Simple Bootstrap Admin Template</title>
 </head>
 <body>
     <!-- Header -->
     <header>
-            <div class="bg-dark collapse" id="ConnexionrHeader" style="">
+            <div class="bg-dark collapse" id="ConnexionHeadertop" style="">
               <div class="container">
                 <div class="row">
                   <div class="col-sm-4 col-md-4 offset-md-4 offset-sm-4 py-4">
@@ -36,7 +38,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-dark collapse" id="navbarHeader" style="">
+            <div class="bg-dark collapse" id="AboutHeadertop" style="">
               <div class="container">
                 <div class="row">
                   <div class="col-sm-8 col-md-7 py-4">
@@ -56,60 +58,127 @@
             </div>
 
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">Administry</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-home"></i> <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#"><i class="fab fa-facebook"></i></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Dropdown
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu rounded-0 animated flipInY" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="#">Another action</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle withbadge" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Message <span class="badge badge-danger rounded-0 animatfSZed fadeIn">2<span class="pulse"></span></span>
+                            </a>
+                            <div class="dropdown-menu rounded-0 animated flipInY" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Message 1</a>
+                            <a class="dropdown-item" href="#">Message 2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">See All</a>
+                            </div>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Active</a>
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="collapse" data-target="#ConnexionHeader" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Connexion</a>
+                            <a class="nav-link disabled" href="#">Disabled</a>
                         </li>
                         </ul>
                         
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown megamenu">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
+                            Mega Menu
                             </a>
-                            <div class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-menu rounded-0 animated fadeIn" aria-labelledby="navbarDropdown">
+                                <div class="container-fluid">
+                                    <div class="row">
+
+                                        <div class="col-sm-3">
+                                            <div class="dropdown-header">Section 1</div>
+                                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                                    <div class="carousel-inner">
+                                                        <div class="carousel-item">
+                                                        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide [800x400]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162798a4ed6%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162798a4ed6%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.9000015258789%22%20y%3D%22218.3%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Second slide [800x400]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162798a4edc%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162798a4edc%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.2916717529297%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                                                        </div>
+                                                        <div class="carousel-item active">
+                                                        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide" alt="Third slide [800x400]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162798a4ee2%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162798a4ee2%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22276.9749984741211%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /.carousel -->
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">View all item <span class="fa fa-chevron-right pull-right"></span></a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="dropdown-header">Section 2</div>
+                                            <a class="dropdown-item" href="#">element 1</a>
+                                            <a class="dropdown-item" href="#">element 2</a>
+                                            <a class="dropdown-item" href="#">element 3</a>
+                                            <a class="dropdown-item" href="#">element 4</a>
+                                            <a class="dropdown-item" href="#">element 5</a>
+                                            <div class="dropdown-divider"></div>
+                                            <div class="dropdown-header">Section 3</div>
+                                            <a class="dropdown-item" href="#">element 6</a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="dropdown-header">Section 4</div>
+                                            <a class="dropdown-item" href="#">element 8</a>
+                                            <a class="dropdown-item" href="#">element 9</a>
+                                            <a class="dropdown-item" href="#">element 10</a>
+                                            <div class="dropdown-divider"></div>
+                                            <div class="dropdown-header">Section 5</div>
+                                            <a class="dropdown-item" href="#">element 11</a>
+                                            <a class="dropdown-item" href="#">element 12</a>
+                                            <a class="dropdown-item" href="#">element 13</a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="dropdown-header">Section 6</div>
+                                            <a class="dropdown-item" href="#">element 14</a>
+                                            <a class="dropdown-item" href="#">element 15</a>
+                                            <a class="dropdown-item" href="#">element 16</a>
+                                            <div class="dropdown-divider"></div>
+                                            <div class="dropdown-header">Forms</div>
+                                            <form class="form" role="form">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="email">Adresse email</label>
+                                                <input class="form-control rounded-0" id="email" placeholder="username@example.com" type="email">
+                                            </div>
+                                            <button type="submit" class="btn btn-danger btn-block rounded-0">Recevoir les alertes</button>
+                                            </form>
+                                        </div>
+                                                
+                                    </div>
+                                  </div>
                             </div>
-                        </li>
+                        </>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Connexion
+                            Formulaire
                             </a>
-                            <div class="dropdown-menu rounded-0 rtl p-2" aria-labelledby="navbarDropdown">
-                                <h6>Vos identifiants de connexion</h6>
-                                <hr>
+                            <div class="dropdown-menu double rounded-0 dropdown-menu-right animated fadeIn" aria-labelledby="navbarDropdown">
+                                <div class="p-2">
+                                    <h6>Vos identifiants de connexion</h6>
+                                    <hr>
                                     <form class="form-signin" style="min-width:300px">
                                             <label for="inputEmail" class="sr-only">Email address</label>
                                             <input id="inputEmail" class="form-control form-control-sm rounded-0 mb-2" placeholder="Email address" required="" autofocus="" type="email">
@@ -120,17 +189,24 @@
                                                 <input value="remember-me" type="checkbox"> Se rappeler de moi
                                                 </label>
                                             </div>
-                                            <button class="btn btn-block btn-primary rounded-0" type="submit">Entrer</button>
+                                            <button class="btn btn-block btn-danger rounded-0" type="submit">Entrer</button>
                                         </form>
+                                    </div>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="collapse" data-target="#ConnexionHeader" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Connexion</a>
+                            <a class="nav-link" href="#" data-toggle="collapse" data-target="#AboutHeadertop" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide down 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="collapse" data-target="#ConnexionHeadertop" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide down 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="collapse" data-target="#ConnexionHeaderbottom" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide Up</a>
                         </li>
                     </ul>
                 </div>
             </nav>   
-            <div class="bg-dark collapse" id="ConnexionHeader" style="">
+            <div class="bg-dark collapse" id="ConnexionHeaderbottom" style="">
                 <div class="container">
                     <div class="row">
                     <div class="col-sm-4 col-md-4 offset-md-4 offset-sm-4 py-4">
