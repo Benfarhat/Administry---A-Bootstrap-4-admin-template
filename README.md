@@ -112,7 +112,7 @@ Voici le contenu de notre fichier index.html
 
 Pour notre interface nous aurons besoins d'un wireframe ou mockup afin d'imaginer l'interface finale:
 
-
+```
 -------------------------------------------------------------------------
 | TITRE  MENU 1                                                 MENU 2  |
 -------------------------------------------------------------------------
@@ -141,6 +141,7 @@ Pour notre interface nous aurons besoins d'un wireframe ou mockup afin d'imagine
 -------------------------------------------------------------------------
 |                               FOOTER                                  |
 -------------------------------------------------------------------------                                 
+```
 
 ## Header
 
