@@ -202,7 +202,7 @@ La barre peut être:
 * affichée normalement (aucune des classes ci-dessous)
 * fixée en haut (classe fixed-top)
 * fixée en bas (class fixed-bottom)
-* étiquetté (pas sur du terme, on dit stiky), cela revient a être affiché normalement, mais en scrollant, des que le menu semble sortir du champ de l'affichage alors il se fixe en haut (class sticky-top)
+* étiquetté (pas sur du terme, on dit sticky), cela revient a être affiché normalement, mais en scrollant, des que le menu semble sortir du champ de l'affichage alors il se fixe en haut (class sticky-top)
 
 Dans notre cas nous allons utilisé la class fixed-top
 
@@ -388,7 +388,7 @@ Nous utiliserons avec [animate.css](https://daneden.github.io/animate.css/) qui 
 
 ##### Animate.css
 
-Pour l'utiliser il vous suffit de rajouter à l'élement sur lequel vous voulez appliquer l'effet la classe `animated` suivi de la classe correspondant à l'effet comme par exemple `bounce`. Si vous voulez un effet qui se repète à l'infini il faudra plutot utiliser la classe `.animated.infinite` au lieu de `<stroke>animated</stroke>`
+Pour l'utiliser il vous suffit de rajouter à l'élement sur lequel vous voulez appliquer l'effet la classe `animated` suivi de la classe correspondant à l'effet comme par exemple `bounce`. Si vous voulez un effet qui se repète à l'infini il faudra plutot utiliser la classe `.animated.infinite` au lieu de <stroke>animated</stroke>
 
 #### Dropdown simple
 
@@ -529,7 +529,7 @@ Pour l'effet de pulsar il suffit de rajouter un span avec la class `pulse` qui r
 
 ```
 
-Si vous voulez que votre effet de sonar soit arrondi il vous suffit de changer <stroke>`border-radius: inherit;`</stroke> en `border-radius: 100%;`
+Si vous voulez que votre effet de sonar soit arrondi il vous suffit de changer <stroke>border-radius: inherit;</stroke> en `border-radius: 100%;`
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">TITRE</a>
