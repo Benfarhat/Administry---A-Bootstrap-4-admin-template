@@ -32,7 +32,7 @@ header .dropdown-toggle .badge{
     z-index: 1500;
 }
 
-/* Waves effect */
+/* Pulsar effect */
 
 
 .pulse {
@@ -53,12 +53,6 @@ header .dropdown-toggle .badge{
             animation-duration: 1.1s;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
-  }
-  [class*="b-s-"] .sonar {
-    border-style: inherit;
-  }
-  [class*="b-w-"] .sonar {
-    border-width: inherit;
   }
   @-webkit-keyframes sonar {
     0% {

@@ -145,3 +145,415 @@ Pour notre interface nous aurons besoins d'un wireframe ou mockup afin d'imagine
 ## Header
 
 Commencons par la partie de haut
+
+### La barre des titres
+
+La barre des titres est la suivante:
+
+```
+<nav class="navbar navbar-expand-lg fixed-topnavbar-dark bg-dark">
+                <a class="navbar-brand" href="#">TITRE</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">MENU 1</a>
+                        </li>
+                    </ul>
+                        
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">MENU 2</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav> 
+```
+Qu'avons nous à retenir ici
+
+#### la définition de la barre
+
+nous allons utiliser la balise nav pour le menu et obligatoirement ajouter la classe `navbar`
+
+#### la définition du moment ou le menu devient renfermé / collapsed
+
+Les classes disponibles suivent ce pattern .navbar-expand{-sm|-md|-lg|xl}), pour les comprendre expliquons les différentes largeur de fenêtres prisent en compte par bootstrap
+    
+* xs: pour extra small devices, regroupant les téléphones en mode portrait avec une largeur inférieure à 575.98px
+* sm: pour small devices, regoupant les téléphones en mode paysage avec une largeur entre 576px à 767.95px 
+* md: pour medium devices, regroupant les tablettes dont la largeur se situe entre 768px et 991.98px
+* lg: pour large devices, regroupant les écrans d'ordinateurs dont la largeur va de 992px à 1199.98px
+* xl: pour extra large devices, regroupant les écrans larges dont la largeur dépasse les 1200px sans limite prédéfinie
+
+Une classe appelé utilise le principe du "qui peut le moins peut le plus", si jamais  j'utilise la classe md, cela englobe implicitement lg et xl, sauf si une règle va en l'encontre. Pour simplifier, dans notre cas en disant navbar-expand-md cela veut dire que tant que la fenêtre qui affiche le site a une largeur supérieur à 768px le menu apparaitra, dès qu'on tombe en dessous de cette valeur alors le menu devient collapsed et n'apparaitre que lorsqu'on cliquera sur ce bouton:
+```
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+```
+#### la position de la barre
+
+La barre peut être:
+
+* affichée normalement (aucune des classes ci-dessous)
+* fixée en haut (classe fixed-top)
+* fixée en bas (class fixed-bottom)
+* étiquetté (pas sur du terme, on dit stiky), cela revient a être affiché normalement, mais en scrollant, des que le menu semble sortir du champ de l'affichage alors il se fixe en haut (class sticky-top)
+
+Dans notre cas nous allons utilisé la class fixed-top
+
+#### La couleur de fond de la barre
+
+##### Fonds
+Les couleurs de fond étant:
+
+* .bg-primary
+* .bg-secondary
+* .bg-success
+* .bg-danger
+* .bg-warning
+* .bg-info
+* .bg-light
+* .bg-dark
+* .bg-white
+
+##### Styles de barre et contraste
+
+Si le fond est claire alors la police doit contraster pour être lisible et être sombre, on utilisera avec les fonds clairs la classe navabar-light et avec les fonds foncés la classe navbar-dark
+
+Il est donc possible de faire:
+
+```
+<nav class="navbar navbar-dark bg-dark">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar navbar-dark bg-primary">
+  <!-- Navbar content -->
+</nav>
+
+```
+
+Par contre le code suivant afficherait un contenu illisible:
+
+```
+<nav class="navbar navbar-dark bg-light">
+  <!-- Navbar content -->
+</nav>
+```
+
+##### Fond personnalisé
+
+Nous pouvons également mettre un fond personalisé en nous inspirant d'une palette de couleurs comme celles de [flat-ui-color](https://flatuicolors.com/)
+Dans le cas de la palette par [défaut](https://flatuicolors.com/palette/defo), constaté les couleurs green sea (#16a085), pomegranate (#c0392b) et belize hole (#2980b9) ou encore via la palette ["spanish"](https://flatuicolors.com/palette/es) tester le résultats avec les fond lucky point (#2c2c54), palm spring splash (#218c74) et devil blue (#227093)
+ 
+```
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark" style="background-color: #227093">
+  <!-- Navbar content -->
+</nav>
+```
+#### Largeur contenu
+
+Vous pouvez faire contenir votre menu pour qu'il n'occupe pas la totalité de la page et soit d'une taille standard (en terme bootstrap) de 1140px (1110px avec deux padding à droite et à gauche de 15px) pour une zone de 1200px, 960px (930px + 2 paddings de 15px) pour une zone de 992px, 720px (690px + 2 paddings de 15px) pour une zone de 768px et enfin 540px (510px + 2 paddings de 15px) pour une zone de 576px
+Notez que pour occuper la totalité de l'écran (100% de la zone contenante) il faut utiliser la class `container-fluid`
+
+#### Position des menus
+
+Les menus peuvent être positionné à gauche ou à droite, vis à vis de bootstrap il suffit juste de mettre la classe `mr-auto` pour que le menu soit à gauche et `ml-auto` pour qu'il soit à droite. **mr** pour créer une marge à droire (margin right) et donc déplacer vers la gauche et **ml** pour créer une marge à gauche et donc déplacer vers la droite
+ 
+### Eléments du menu
+
+#### icone
+
+Pour les icones nous utiliserons pour chaque élement (de class `nav-item`) font awesome comme suit:
+
+```
+<li class="nav-item">
+    <a class="nav-link" href="#"><i class="fa fa-home"></i> <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="#"><i class="fab fa-facebook"></i></a>
+</li>
+```
+
+#### Les menus coulissants
+
+il y a deux type de menus coulissant:
+* collasped pour coulisser de haut en bas
+* dropdown pour apparaitre de haut en bas (dropup existe aussi mais ne peut pas être utilisé dans un menu supérieur)
+
+#### collapsed menu
+
+Nous avons deux élements qui coulissent, un se trouve au dessus du menu, un autre en dessous du menu, il suffit juste de les positionner dans votre fichier index.html avant ou après le menu et de créer les boutons déclencheurs qui activerons le glissement. Vous êtes libre de mettre ce que vous voulez, ici nous avons mis pour le premier l'exemple fournit par bootstrap et pour le second un formulaire de connexion
+
+```
+<!-- APPARAITRA EN HAUT -->
+<div class="bg-dark collapse" id="ConnexionHeadertop" style="">
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-md-4 offset-md-4 offset-sm-4 py-4">
+        <h4 class="text-white">Connexion</h4>
+        <form class="form-signin">
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input id="inputEmail" class="form-control rounded-0 mb-2" placeholder="Email address" required="" autofocus="" type="email">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input id="inputPassword" class="form-control rounded-0" placeholder="Password" required="" type="password">
+            <div class="checkbox mb-3">
+                <label class="text-white">
+                <input value="remember-me" type="checkbox"> Se rappeler de moi
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block rounded-0" type="submit">Entrer</button>
+        </form>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="bg-dark collapse" id="AboutHeadertop" style="">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">A propos</h4>
+            <p class="text-muted"></p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Administry</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">MENU 1</a>
+            </li>
+        </ul>
+            
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#AboutHeadertop" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide down 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#ConnexionHeadertop" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide down 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#ConnexionHeaderbottom" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide Up</a>
+            </li>
+        </ul>
+    </div>
+</nav>  
+<!-- APPARAITRA EN BAS --> 
+<div class="bg-dark collapse" id="ConnexionHeaderbottom" style="">
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-4 col-md-4 offset-md-4 offset-sm-4 py-4">
+            <h4 class="text-white">Connexion</h4>
+            <form class="form-signin">
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input id="inputEmail" class="form-control rounded-0 mb-2" placeholder="Email address" required="" autofocus="" type="email">
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input id="inputPassword" class="form-control rounded-0" placeholder="Password" required="" type="password">
+                <div class="checkbox mb-3">
+                    <label class="text-white">
+                    <input value="remember-me" type="checkbox"> Se rappeler de moi
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block rounded-0" type="submit">Entrer</button>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+```
+
+#### Menu Dropdown
+
+Nous utiliserons avec [animate.css](https://daneden.github.io/animate.css/) qui permettra de rajouter un effet visuel lors de son apparition.
+
+##### Animate.css
+
+Pour l'utiliser il vous suffit de rajouter à l'élement sur lequel vous voulez appliquer l'effet la classe `animated` suivi de la classe correspondant à l'effet comme par exemple `bounce`. Si vous voulez un effet qui se repète à l'infini il faudra plutot utiliser la classe `.animated.infinite` au lieu de `<stroke>animated</stroke>`
+
+#### Dropdown simple
+
+Pour notre dropdown simple avec une flèche qui indique qu'un sous menu existe, il vous suffit d'utiliser un code similaire à celui ci:
+
+```
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown
+    </a>
+    <div class="dropdown-menu rounded-0 animated flipInY" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</li>
+```
+
+#### Dropdown avec badge
+
+Un sous menu avec un badge est identique aux précédents à la différence qu'au lieu d'afficher une flèche nous allons afficher un badge. 
+
+voici donc le code HTML:
+
+```
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle withbadge" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Message <span class="badge badge-danger rounded-0 animatfSZed fadeIn">2<span class="pulse"></span></span>
+    </a>
+    <div class="dropdown-menu rounded-0 animated flipInY" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="#">Message 1</a>
+    <a class="dropdown-item" href="#">Message 2</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">See All</a>
+    </div>
+</li>
+```
+
+Le code CSS permettant de ne pas afficher la flèche et de bien positionner le badge répond à la classe `withbadge`, voici le contenu:
+
+```
+
+header .dropdown-toggle.withbadge{
+    position: relative;
+}
+header .dropdown-toggle.withbadge::after{
+    border: none;
+    width :4px;
+}
+header .dropdown-toggle .badge{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1500;
+}
+```
+
+Pour l'effet de pulsar il suffit de rajouter un span avec la class `pulse` qui répondra au code CSS suivant:
+
+```
+/* Pulsar effect */
+
+
+.pulse {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
+    border-radius: inherit;
+    -webkit-animation-name: sonar;
+            animation-name: sonar;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-duration: 1.1s;
+            animation-duration: 1.1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes sonar {
+    0% {
+      -webkit-transform: scale(15);
+              transform: scale1);
+      opacity: 0.0;
+    }
+    25% {
+      -webkit-transform: scale(1.25);
+              transform: scale(1.25);
+      opacity: 0.5;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+      opacity: 0.15;
+    }
+    75% {
+      -webkit-transform: scale(1.75);
+              transform: scale(1.75);
+      opacity: 0.2;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 0.0;
+    }
+  }
+  @keyframes sonar {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 0.0;
+    }
+    25% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 0.05;
+    }
+    50% {
+      -webkit-transform: scale(1.25);
+              transform: scale(1.25);
+      opacity: 0.15;
+    }
+    75% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+      opacity: 0.2;
+    }
+    100% {
+      -webkit-transform: scale(1.75);
+              transform: scale(1.75);
+      opacity: 0.0;
+    }
+  }
+
+```
+
+Si vous voulez que votre effet de sonar soit arrondi il vous suffit de changer <stroke>`border-radius: inherit;`</stroke> en `border-radius: 100%;`
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">TITRE</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">MENU 1</a>
+                        </li>
+                    </ul>
+                        
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="collapse" data-target="#AboutHeadertop" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide down 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="collapse" data-target="#ConnexionHeadertop" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide down 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="collapse" data-target="#ConnexionHeaderbottom" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav> 
+```
