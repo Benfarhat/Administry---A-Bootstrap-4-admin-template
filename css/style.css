@@ -349,7 +349,7 @@ main .dropdown-menu{
 
 /* Flatify */
 
-.btn, .alert, .badge, .card, .input, textarea, .modal, .nav, .navbar, .progress{
+.btn, .alert, .badge, .card, .form-control, .modal, .nav, .navbar, .progress, .list-group-item{
     border-radius: 0 !important;
 }
 
