@@ -1,5 +1,55 @@
 # Création d'un thème d'administration avec Bootstrap 4
 
+- [Création d'un thème d'administration avec Bootstrap 4](#cr%C3%A9ation-dun-th%C3%A8me-dadministration-avec-bootstrap-4)
+    - [Démarrage](#d%C3%A9marrage)
+        - [Intégrité des sous ressources](#int%C3%A9grit%C3%A9-des-sous-ressources)
+        - [Position des balises styles et script](#position-des-balises-styles-et-script)
+        - [Mise en cache et compression](#mise-en-cache-et-compression)
+        - [création des fichiers de personalisation](#cr%C3%A9ation-des-fichiers-de-personalisation)
+        - [Ajoutons Font awesome](#ajoutons-font-awesome)
+        - [Code final du fichier de démarrage](#code-final-du-fichier-de-d%C3%A9marrage)
+    - [Interface](#interface)
+    - [Header](#header)
+        - [La barre des titres](#la-barre-des-titres)
+            - [la définition de la barre](#la-d%C3%A9finition-de-la-barre)
+            - [la définition du moment ou le menu devient renfermé / collapsed](#la-d%C3%A9finition-du-moment-ou-le-menu-devient-renferm%C3%A9-collapsed)
+            - [la position de la barre](#la-position-de-la-barre)
+            - [La couleur de fond de la barre](#la-couleur-de-fond-de-la-barre)
+                - [Fonds](#fonds)
+                - [Styles de barre et contraste](#styles-de-barre-et-contraste)
+                - [Fond personnalisé](#fond-personnalis%C3%A9)
+            - [Largeur contenu](#largeur-contenu)
+            - [Position des menus](#position-des-menus)
+        - [Modification de la position des sous menus](#modification-de-la-position-des-sous-menus)
+        - [Eléments du menu](#el%C3%A9ments-du-menu)
+            - [icone](#icone)
+            - [Les menus coulissants](#les-menus-coulissants)
+            - [collapsed menu](#collapsed-menu)
+            - [Menu Dropdown](#menu-dropdown)
+                - [Animate.css](#animatecss)
+            - [Dropdown simple](#dropdown-simple)
+            - [Dropdown avec badge](#dropdown-avec-badge)
+            - [Dropdown avec formulaire](#dropdown-avec-formulaire)
+                - [Alignement à droite et à gauche](#alignement-%C3%A0-droite-et-%C3%A0-gauche)
+                - [implémentation](#impl%C3%A9mentation)
+            - [Dropdown avec Mega Menu](#dropdown-avec-mega-menu)
+        - [Préparation pour la sidebar](#pr%C3%A9paration-pour-la-sidebar)
+            - [Un petit fix!](#un-petit-fix)
+        - [Dessinons nos zones](#dessinons-nos-zones)
+    - [La sidebar](#la-sidebar)
+        - [changement de style](#changement-de-style)
+        - [Positionnement](#positionnement)
+        - [Retour a une header clair](#retour-a-une-header-clair)
+        - [Scrollbar de la sidebar](#scrollbar-de-la-sidebar)
+        - [Insertion d'onglet](#insertion-donglet)
+        - [Insertion de sous menu](#insertion-de-sous-menu)
+        - [Direction de la flèche selon le menu](#direction-de-la-fl%C3%A8che-selon-le-menu)
+        - [Affichage de badge au lieu de flèche](#affichage-de-badge-au-lieu-de-fl%C3%A8che)
+        - [Bouton pour activer et désactiver la sidebar](#bouton-pour-activer-et-d%C3%A9sactiver-la-sidebar)
+        - [Le Footer](#le-footer)
+        - [Le Main](#le-main)
+
+
 Nous allons utiliser Bootstrap 4 pour essayer de mettre en place rapidement un template bootstrap pour l'administration. Notez que l'interface sera en ltr (left to right) et rtl (right to left).
 
 ## Démarrage
@@ -857,6 +907,7 @@ Pour tester le contenu de base, en mettant ce bout de code:
 </nav>
 ```
 
+### changement de style
 Vous devez vous dire que le résultat est absoluement dégueulasse à la limite de l'évanouissement... ettttt vous avez pas tord. Arrangeons ca par quelques bases:
 On enlève le style des puces des lists (le rond par defaut), ensuite on enlève le fait que les liens soient soulignées lors du survole, et surtout on va essayer de délimiter la zone de chaque élement en donnant un fond rouge
 
@@ -877,6 +928,9 @@ a:hover{
     margin-bottom:1px;
 }
 ```
+
+### Positionnement
+
 On voit qu'entre la sidebar et le menu il y a un espace, on va modifier tout cela en rendant le fond gris, chaque "li" prendra toute la largeur, au survol de la souris, le fond de l'élement en cours s'assombri, alors que la couleur de police s'éclairci, une bordure blanch apparaitra et restera en vert (couleur du titre) lorsque l'élement est sélectionné, le code css résultant est le suivant:
 
 ```
@@ -935,6 +989,8 @@ a:hover{
 }
 ```
 
+### Retour a une header clair
+
 Amélioront légèrement le menu pour bien le différencier  du menu. 
 
 Mettons ensuite notre menu supérieur en claire avec une bordure:
@@ -988,6 +1044,8 @@ border-color: transparent;
 border-color: #aaa;
 }
 ```
+
+### Scrollbar de la sidebar
 
 Recopions les sous menu de la sidebar 2 fois supplémentaire pour voir l'effet, le code html de la sidebar devient comme suit:
 
@@ -1045,7 +1103,9 @@ la même occasion nous devons faire en sortes a ce que la sidebar soit "sticky" 
 
 Ce code va faire en sorte que la zone "main" va se retrouver en dessous de la sidebar, nous allons donc decaler cette zone vers la droite de la largeur de la sidebar grace aux classes bootstrap offset, nous y rajouterons juste la classe `offset-md-2`.
 
-Rajoutons une zone à la sidebar qui contiendra un affichage en onglet avec comme menu des icones, dans le premier onglet nous afficherons du texte, le second un formulaire et le troisième une barre d'onglet, le code HTMLnest le suivant:
+### Insertion d'onglet
+
+Rajoutons une zone à la sidebar qui contiendra un affichage en onglet avec comme menu des icones, dans le premier onglet nous afficherons du texte, le second un formulaire et le troisième une barre d'onglet, le code HTML est le suivant:
 
 ```
 <div class="sidebar-section">
@@ -1127,6 +1187,7 @@ et voici le code css qui va permettre de faire correspondre le contenu à la sid
 }
 ```
 
+### Insertion de sous menu
 
 A présent revenons à nos menu de la sidebar et modifions le second pour qu'il soit dropdown, pour cela nous allons tous simplement utilisé ce qui existe déjà principe (DRY) en utilisant la possibilité de rendre les choses collapsible:
 
@@ -1151,4 +1212,171 @@ A présent revenons à nos menu de la sidebar et modifions le second pour qu'il 
 </div
 ```
 
+### Direction de la flèche selon le menu
 
+La flèche de notre menu doit changer de direction pour permettre de savoir si un menu est ouvert ou pas, voici le code css permettant de faire cela:
+
+```
+/* Sidebar dropdown arrow direction */
+.sidebar .dropdown-toggle.collapsed::after {
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+.sidebar .dropdown-toggle::after {
+    border-left: .3em solid;
+    border-top: .3em solid transparent;
+    border-right: 0;
+    border-bottom: .3em solid transparent;
+}
+```
+
+### Affichage de badge au lieu de flèche
+
+Pour intégrer la notion de badge, nous allons étendre le style withbadge comme suit:
+
+```
+header .dropdown-toggle.withbadge::after, .sidebar .dropdown-toggle.withbadge::after{
+    border: none;
+    width :4px;
+}
+```
+
+### Bouton pour activer et désactiver la sidebar
+
+Nous allons ajouter un bouton qui permettra de cacher ou faire apparaitre le menu. Rajoutons donc ce bouton:
+
+```
+<li class="nav-item">
+    <a class="nav-link" class="toggle-sidebar" href="#"><i class="fa fa-align-justify"></i></a>
+</li>
+```
+
+La sidebar aura l'id sidebar et le contenu l'id "maincontent
+
+Ensuite ajoutons le script necessaire, pour le code javascript il faudrait ceci:
+
+```
+document.querySelector(".toggle-sidebar").addEventListener("click", function(event) {
+    var sidebar = document.getElementById("sidebar");
+    var maincontent = document.getElementById("maincontent");
+    var myClass = "";
+
+
+    if (sidebar.classList) {
+        sidebar.classList.toggle("d-none");
+    } else {
+        // For IE9
+        var classes = sidebar.className.split(" ");
+        var i = classes.indexOf("d-none");
+
+        if (i >= 0)
+            classes.splice(i, 1);
+        else
+            classes.push("d-none");
+            sidebar.className = classes.join(" ");
+    }
+
+
+    myClass="offset-md-2"
+
+    if (maincontent.classList) {
+        maincontent.classList.toggle(myClass);
+    } else {
+        // For IE9
+        var classes = sidebar.className.split(" ");
+        var i = classes.indexOf(myClass);
+
+        if (i >= 0)
+            classes.splice(i, 1);
+        else
+            classes.push(myClass);
+            sidebar.className = classes.join(" ");
+    }
+
+    myClass="col-md-10"
+
+    if (maincontent.classList) {
+        maincontent.classList.toggle(myClass);
+    } else {
+        // For IE9
+        var classes = sidebar.className.split(" ");
+        var i = classes.indexOf(myClass);
+
+        if (i >= 0)
+            classes.splice(i, 1);
+        else
+            classes.push(myClass);
+            sidebar.className = classes.join(" ");
+    }
+
+    myClass="col-md-12"
+
+    if (maincontent.classList) {
+        maincontent.classList.toggle(myClass);
+    } else {
+        // For IE9
+        var classes = sidebar.className.split(" ");
+        var i = classes.indexOf(myClass);
+
+        if (i >= 0)
+            classes.splice(i, 1);
+        else
+            classes.push(myClass);
+            sidebar.className = classes.join(" ");
+    }
+
+
+    event.preventDefault();
+}, false);
+```
+
+En jQuery cela donne cela:
+
+```
+$(function(){
+    $( ".toggle-sidebar" ).click(function() {
+        $( "#sidebar" ).toggleClass( "d-none" );
+        $( "#maincontent" ).toggleClass( "col-md-10 offset-md-2" ).toggleClass( "col-md-12" );
+    });
+ 
+ });
+```
+
+### Le Footer
+
+Profitons de cet instant pour insérer notre bas de page
+vu que la sidebar prend toute la hauteur (sauf au niveau du titre) nous mettrons le footer dans le mainContent.
+
+```
+<footer class="bg-light border-top">
+    <div class="container">
+        <div class="text-muted text-center">Please <span class="text-danger">❤❤❤</span> No matter how small your contribution is, never stop sharing your knowledge with the world! [Benfarhat](https://github.com/Benfarhat)</div>
+    </div>
+</footer>
+```
+Si vous mettez un menu déroulant dans votre footer, pensez à utiliser les menu en dropup (qui se déroulent vers le hauts)
+
+Le code CSS est le suivant:
+
+```
+/* Sticky footer */
+footer {
+    position: relative;
+    left:0;
+    right:0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+    padding: 4px 8px;
+    margin-top: 30px;
+    font-size:0.9rem;
+}
+```
+
+Et notez que nous avons ajouter à #mmaincontent la class p-0 pourqu'il n'y ai pas d'espace interne et que le footer colle bien sur les bords.
+
+### Le Main

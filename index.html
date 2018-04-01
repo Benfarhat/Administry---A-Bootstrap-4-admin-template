@@ -68,6 +68,9 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
+                        <a class="nav-link toggle-sidebar" href="#"><i class="fa fa-align-justify"></i></a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-home"></i> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
@@ -237,13 +240,31 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <nav class="col-md-2 sidebar" data-simplebar>
+            <nav id="sidebar" class="col-md-2 sidebar" data-simplebar>
                 <div class="sidebar-section">
                     <div class="sidebar-header">Menu 1</div>
                     <ul>
                         <li><a href="#"><i class="fa fa-circle"></i><span>Tableau de bord</span></a></li>
                         <li class="active"><a href="#"><i class="fa fa-circle"></i><span>Utilisateurs</span></a></li>
-                        <li><a href="#"><i class="fa fa-circle"></i><span>Statistiques</span></a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle withbadge" href="#" id="navbarDropdown" role="button" data-toggle="collapse" data-target="#sousmenu1">
+                                <i class="fa fa-circle"></i>Dropdown<span class="badge badge-info rounded-0">3</a>
+                            </a>
+                            <div class="collapse" id="sousmenu1">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle withbadge" href="#" id="navbarDropdown" role="button" data-toggle="collapse" data-target="#sousmenu2">
+                                <i class="fa fa-circle"></i>Dropdown<span class="badge badge-danger rounded-0">2</a>
+                            </a>
+                            <div class="collapse" id="sousmenu2">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                            </div>
+                        </li>
                         <li><a href="#"><i class="fa fa-circle"></i><span>Tables</span></a></li>
                     </ul>
                 </div> 
@@ -252,10 +273,10 @@
                     <div class="sidebar-header">Menu 2</div>
                     <ul>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="collapse" data-target="#sousmenu1">
-                                Dropdown
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="collapse" data-target="#sousmenu3">
+                                <i class="fa fa-circle"></i>Dropdown
                             </a>
-                            <div class="collapse" id="sousmenu1">
+                            <div class="collapse" id="sousmenu3">
                                 <a class="dropdown-item" href="#">Action</a>
                                 <a class="dropdown-item" href="#">Another action</a>
                                 <a class="dropdown-item" href="#">Something else here</a>
@@ -334,7 +355,7 @@
             </nav>
             <!-- /Sidebar -->
             <!-- Main content -->
-            <main class="col-md-10 offset-md-2 border-top" style="height:200px;">
+            <main id="maincontent" class="col-md-10 offset-md-2 border-top p-0" style="height:200px;position:relative;">
                     Content
                     <br>
                     <br>
@@ -379,7 +400,11 @@
                             <p>Some more content</p>
                 hey!
                           </div>	
-
+                <footer class="bg-light border-top">
+                    <div class="container">
+                        <div class="text-muted text-center">Please <span class="text-danger">❤❤❤</span> No matter how small your contribution is, never stop sharing your knowledge with the world! <hr> - <a href="https://github.com/Benfarhat">Benfarhat</a> - </div>
+                    </div>
+                </footer>
 
             </main>
             <!-- /Main content -->
