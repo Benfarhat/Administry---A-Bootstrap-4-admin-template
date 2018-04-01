@@ -3,6 +3,9 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     font-size: .875rem;
 }
+.bg-grey{
+    background-color:#ececec !important;
+}
 
 /* Image grayscale */
 
@@ -326,6 +329,22 @@ main nav .breadcrumb {
 
 main .dropdown-menu{
     top:100% !important;
+}
+
+.context-menu, .context-menu .dropdown-menu{
+    font-size: 0.7rem ! important;
+    line-height: 2rem;
+}
+.context-menu .dropdown-menu{
+    line-height: 1.3rem;
+}
+.context-menu a{
+    color: #666
+}
+.context-menu a:hover,
+.context-menu a:focus,
+.context-menu a:active{
+    color: #218c74
 }
 
 /* Debug */

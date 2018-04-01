@@ -50,6 +50,9 @@
         - [Le Footer](#le-footer)
         - [Le Main](#le-main)
             - [Le breadcrumb ou fil d'ariane](#le-breadcrumb-ou-fil-dariane)
+        - [Fix et modification](#fix-et-modification)
+        - [Notre premier contenu](#notre-premier-contenu)
+    - [What else!](#what-else)
 
 
 Nous allons utiliser Bootstrap 4 pour essayer de mettre en place rapidement un template bootstrap pour l'administration. Notez que l'interface sera en ltr (left to right) et rtl (right to left).
@@ -1421,5 +1424,102 @@ Nous allons placer notre fil d'ariane en haut de la page, en recopiant simplemen
 </div>
 <!-- /Main content -->
 ```
+a présent collons un menu à droite du fil d'ariane nous rajoutons un menu aligner à droite:
+
+```
+<main id="content" class="container-fluid p-0">
+    <!-- Collapsed and show on menu click >> Here, div will have the same width than Main -->
+    <div class="bg-dark collapse" id="ConnexionHeaderbottom" style="">
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-4 col-md-4 offset-md-4 offset-sm-4 py-4">
+                <h4 class="text-white">Connexion</h4>
+                <form class="form-signin">
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input id="inputEmail" class="form-control rounded-0 mb-2" placeholder="Email address" required="" autofocus="" type="email">
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input id="inputPassword" class="form-control rounded-0" placeholder="Password" required="" type="password">
+                    <div class="checkbox mb-3">
+                        <label class="text-white">
+                        <input value="remember-me" type="checkbox"> Se rappeler de moi
+                        </label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block rounded-0" type="submit">Entrer</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Collapsed and show on menu click -->
+
+    <div class="row bg-light border-bottom p-0">
+        <nav aria-label="breadcrumb" class="col-md-6">
+            <ol class="breadcrumb bg-light">
+                <li class="breadcrumb-item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">Library</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    Data
+                </li>
+            </ol>
+        </nav>
+        <ul class="nav col-md-6 justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Publish / Unpublish</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Delete this page</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Modification
+                </a>
+                <div class="dropdown-menu dropdown-menu-right rounded-0 animated flipInX" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Edit this article</a>
+                <a class="dropdown-item" href="#">Change category</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Add article</a>
+                </div>
+            </li>
+        </ul>
+    </div> 
+</main>	
+```
+
+### Fix et modification
+
+Il y a plusieurs modification faites au niveau de l'interface et non précisée dans ce tuto, ces modifications utilisent du pure bootstrap et ne sont constitué que de "fix" comme par exemple:
+
+- L'ajout d'une image dans le menu supérieur et dans le brand
+- La modification des titres de menu et de leur icone
+- la bordure sous le menu supérieur qui est composé de deux couleur (via les gradients linéraires)
+- la modification de la hauteurs du menu supérieurs pour qu'il puisse inclure des images de plus de 24pixels de hauteurs
+- la modification également du padding supérieur du body et de la position de la sidebar qui doit par rapport au top être aligné au bas du menu supérieur
+- la direction des flèches qui est corrigé selon les deux états (collapsed ou non)
+
+Si vous voulez connaitre le détail, les codes sources étant sur github ainsi que l'historique, vous pourrez retrouver les modifications aisément (elles ne sont pas nécessaire pour comprendre l'implémentation)
+
+### Notre premier contenu
+
+Si vous observer bien, tout ce qui a été fait jusqu'a maintenant essai de n'utiliser que des classes bootstraps et de ne pas trop en rajouter pour qu'une personne qui maitrise bootstrap 4 puisse très facilement s'y retrouvé, la seule exception à la règle qui sera modifier et la non utilisation massive de flex au niveau de la sidebar (toujours cette phobie qu'il ne soit pas supporté par tous les navigateurs). Cette exception a été ajouté à la TODO list
+
+Pour notre premier contenu nous allons mettre le contenu d'un des exemples de bootstrap
+
+A présent nous ajoutons une classe bg-grey pour un fond légèrement gris que nous appliquerons à la div "maincontent":
+
+```
+.bg-grey{
+    background-color:#ececec !important;
+}
+```
+
+Puis pour chaque section nous appliquons les classes `border`, `bg-white` et `m-4`
+
+## What else!
+Il y a une TODO qui en principe permettra de rajouter un grand nombre d'options, la plus intéressante est très probablement la mise en place d'une version RTL.
 
 
+Quod erat demonstrandum!
