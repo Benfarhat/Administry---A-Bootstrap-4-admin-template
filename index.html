@@ -7,14 +7,16 @@
     <!-- Bootstrap Style -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Font Awesome -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <!-- Animated.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
+    <!-- Simple scrollbar -->
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@2.3.1/dist/simplebar.css" />
     <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css" />
     <title>Administry | A Simple Bootstrap Admin Template</title>
 </head>
-<body>
+<body style="padding-top:46px;">
     <!-- Header -->
     <header>
         <div class="bg-dark collapse" id="ConnexionHeadertop" style="">
@@ -57,8 +59,8 @@
             </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Administry</a>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light p-0">
+            <a class="navbar-brand col-md-2 mr-0" href="#">Administry</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -170,29 +172,6 @@
                                 </div>
                                 </div>
                         </div>
-                    </>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Formulaire
-                        </a>
-                        <div class="dropdown-menu double rounded-0 dropdown-menu-right animated fadeIn" aria-labelledby="navbarDropdown">
-                            <div class="p-2">
-                                <h6>Vos identifiants de connexion</h6>
-                                <hr>
-                                <form class="form-signin" style="min-width:300px">
-                                        <label for="inputEmail" class="sr-only">Email address</label>
-                                        <input id="inputEmail" class="form-control form-control-sm rounded-0 mb-2" placeholder="Email address" required="" autofocus="" type="email">
-                                        <label for="inputPassword" class="sr-only">Password</label>
-                                        <input id="inputPassword" class="form-control form-control-sm rounded-0 mb-2" placeholder="Password" required="" type="password">
-                                        <div class="checkbox mb-3">
-                                            <label>
-                                            <input value="remember-me" type="checkbox"> Se rappeler de moi
-                                            </label>
-                                        </div>
-                                        <button class="btn btn-block btn-danger rounded-0" type="submit">Entrer</button>
-                                    </form>
-                                </div>
-                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" data-target="#AboutHeadertop" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide down 1</a>
@@ -203,6 +182,30 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" data-target="#ConnexionHeaderbottom" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide Up</a>
                     </li>
+                    
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Formulaire
+                            </a>
+                            <div class="dropdown-menu double rounded-0 dropdown-menu-right animated fadeIn" aria-labelledby="navbarDropdown">
+                                <div class="p-2">
+                                    <h6>Vos identifiants de connexion</h6>
+                                    <hr>
+                                    <form class="form-signin">
+                                            <label for="inputEmail" class="sr-only">Email address</label>
+                                            <input id="inputEmail" class="form-control form-control-sm rounded-0 mb-2" placeholder="Email address" required="" autofocus="" type="email">
+                                            <label for="inputPassword" class="sr-only">Password</label>
+                                            <input id="inputPassword" class="form-control form-control-sm rounded-0 mb-2" placeholder="Password" required="" type="password">
+                                            <div class="checkbox mb-3">
+                                                <label>
+                                                <input value="remember-me" type="checkbox"> Se rappeler de moi
+                                                </label>
+                                            </div>
+                                            <button class="btn btn-block btn-danger rounded-0" type="submit">Entrer</button>
+                                        </form>
+                                    </div>
+                            </div>
+                        </li>
                 </ul>
             </div>
         </nav>   
@@ -227,20 +230,172 @@
                 </div>
             </div>
         </div>
-        </header>
+    </header>
+    <!-- /Header -->
 
-        <div class="container">
-        <!-- Content here -->
-          <h1> Tittle </h1>
-          <p style="min-height:900px">content</p>
+    <!-- Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 sidebar" data-simplebar>
+                <div class="sidebar-section">
+                    <div class="sidebar-header">Menu 1</div>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-circle"></i><span>Tableau de bord</span></a></li>
+                        <li class="active"><a href="#"><i class="fa fa-circle"></i><span>Utilisateurs</span></a></li>
+                        <li><a href="#"><i class="fa fa-circle"></i><span>Statistiques</span></a></li>
+                        <li><a href="#"><i class="fa fa-circle"></i><span>Tables</span></a></li>
+                    </ul>
+                </div> 
+
+                <div class="sidebar-section">
+                    <div class="sidebar-header">Menu 2</div>
+                    <ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="active"><a href="#"><i class="fa fa-circle"></i><span>Utilisateurs</span></a></li>
+                        <li><a href="#"><i class="fa fa-circle"></i><span>Statistiques</span></a></li>
+                        <li><a href="#"><i class="fa fa-circle"></i><span>Tables</span></a></li>
+                    </ul>
+                </div> 
+
+                <div class="sidebar-section">
+                    <div class="sidebar-header">Menu 3</div>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-circle"></i><span>Tableau de bord</span></a></li>
+                        <li class="active"><a href="#"><i class="fa fa-circle"></i><span>Utilisateurs</span></a></li>
+                        <li><a href="#"><i class="fa fa-circle"></i><span>Statistiques</span></a></li>
+                        <li><a href="#"><i class="fa fa-circle"></i><span>Tables</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <ul class="nav nav-tabs row" id="myTab" role="tablist">
+                        <li class="nav-item col-md-4 p-0 text-center">
+                          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fa fa-home"></i></a>
+                        </li>
+                        <li class="nav-item col-md-4 p-0 text-center">
+                          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="fa fa-cogs"></i></a>
+                        </li>
+                        <li class="nav-item col-md-4 p-0 text-center">
+                          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-edit"></i></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content p-2" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <form>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <div class="progress" style="height: 4px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress" style="height: 4px;">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress" style="height: 4px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress" style="height: 4px;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- /Sidebar -->
+            <!-- Main content -->
+            <main class="col-md-10 offset-md-2 border-top" style="height:200px;">
+                    Content
+                    <br>
+                    <br>
+                    content
+                    Content
+                    <br>
+                    <br>
+                    content
+                    Content
+                    <br>
+                    <br>
+                    content
+
+                    <div class="demo1" data-simplebar>
+                            <h2>Scroll me!</h2>
+                            <p>Some more content</p>
+                            <p class="odd">Some content</p>
+                            <p>Some more content</p>
+                            <p class="odd">Some content</p>
+                            <p>Some more content</p>
+                            <p class="odd">Some content</p>
+                            <p>Some more content</p>
+                            <p class="odd">Scroll me!</p>
+                            <p>Some more content</p>
+                            <p class="odd">Some content</p>
+                            <p>Some more content</p>
+                            <p class="odd">Some content</p>
+                            <p>Some more content</p>
+                            <p class="odd">Some content</p>
+                            <p>Some more content</p>
+                            <p class="odd">Scroll me!</p>
+                            <p>Some more content</p>
+                            <p class="odd">Some content</p>
+                            <p>Some more content</p>
+                            <p class="odd">Some content</p>
+                            <p>Some more content</p>
+                            <p class="odd">Some content</p>
+                            <p>Some more content</p>
+                            <p class="odd">Some content</p>
+                            <p>Some more content</p>
+                            <p class="odd">Some content</p>
+                            <p>Some more content</p>
+                hey!
+                          </div>	
+
+
+            </main>
+            <!-- /Main content -->
         </div>
-    
+    </div>
+    <!-- /Content -->
+
     <!-- jQuery first -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <!-- Popper.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- simple Scrollbar -->
+    <script src="https://unpkg.com/simplebar@2.3.1/dist/simplebar.js"></script>
     <!-- Custom scripts -->
     <script src="js/script.js"></script>
 </body>
