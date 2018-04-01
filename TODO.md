@@ -14,5 +14,5 @@
     - [ ] Prochainement
 - [ ] Inclure plus de police de caractères
 - [ ] Inclure d'autres icones
-- [ ] Améliorer le code - compatibilité avec le guide de [mdo](http://pixelastic.github.io/code-guide/)
+- [ ] Améliorer le code - compatibilité avec le guide de [mdo](http://pixelastic.github.io/code-guide/) pour une meilleure lisibilité
 - [ ] - [ ] Interface RTL
