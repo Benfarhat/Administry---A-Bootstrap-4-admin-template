@@ -80,7 +80,7 @@ header .navbar-nav li a {
     height: 100%;
     border-width: 1px;
     border-style: solid;
-    border-color: #aaa;
+    border-color: transparent;
     border-radius: inherit;
     -webkit-animation-name: sonar;
             animation-name: sonar;
@@ -248,4 +248,29 @@ a:hover{
     background-color: transparent;
     border-radius:none;
     margin: 16px 0;
+}
+
+/* Sidebar dropdown menu */
+.sidebar .dropdown-toggle::after{
+    float:right;
+    position:relative;
+    top: 10px;
+}
+.sidebar .dropdown-menu{
+    z-index: unset;
+    background-color: transparent !important;
+    display:block;
+    border: 1px solid red;
+    border-radius: 0;
+}
+.sidebar ul li.dropdown a{
+    position: relative;
+}
+.sidebar .dropdown-menu a{
+    color: rgba(255,255,255,0.5);
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+.sidebar .dropdown-menu a:hover{
+    color: rgba(255,255,255,0.8)
 }

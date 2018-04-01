@@ -1128,20 +1128,19 @@ et voici le code css qui va permettre de faire correspondre le contenu à la sid
 ```
 
 
-A présent revenons à nos menu de la sidebar et modifions le second pour qu'il soit dropdown:
+A présent revenons à nos menu de la sidebar et modifions le second pour qu'il soit dropdown, pour cela nous allons tous simplement utilisé ce qui existe déjà principe (DRY) en utilisant la possibilité de rendre les choses collapsible:
 
 ```
 <div class="sidebar-section">
     <div class="sidebar-header">Menu 2</div>
     <ul>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="collapse" data-target="#sousmenu1">
                 Dropdown
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="collapse" id="sousmenu1">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a>
             </div>
         </li>
@@ -1149,6 +1148,7 @@ A présent revenons à nos menu de la sidebar et modifions le second pour qu'il 
         <li><a href="#"><i class="fa fa-circle"></i><span>Statistiques</span></a></li>
         <li><a href="#"><i class="fa fa-circle"></i><span>Tables</span></a></li>
     </ul>
-</div> 
+</div
 ```
+
 
