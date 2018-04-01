@@ -46,8 +46,10 @@
         - [Direction de la flèche selon le menu](#direction-de-la-fl%C3%A8che-selon-le-menu)
         - [Affichage de badge au lieu de flèche](#affichage-de-badge-au-lieu-de-fl%C3%A8che)
         - [Bouton pour activer et désactiver la sidebar](#bouton-pour-activer-et-d%C3%A9sactiver-la-sidebar)
+            - [Choix des balises](#choix-des-balises)
         - [Le Footer](#le-footer)
         - [Le Main](#le-main)
+            - [Le breadcrumb ou fil d'ariane](#le-breadcrumb-ou-fil-dariane)
 
 
 Nous allons utiliser Bootstrap 4 pour essayer de mettre en place rapidement un template bootstrap pour l'administration. Notez que l'interface sera en ltr (left to right) et rtl (right to left).
@@ -1344,6 +1346,10 @@ $(function(){
  });
 ```
 
+#### Choix des balises
+
+Pour la sidebar nous avons mis la balise nav, cela permet de renseigner et dire qu'il s'agit d'une navigation, mais vu que nous avons ajouter des barres de progressions permettant d'afficher des states, du texte qui pourrait comprendre un mot de bienvenue ou un `motd`, il serait plus judicieux d'encadrer seulement les zone de navigation par la balise nav et d'englober la sidebar avec la balise aside.
+
 ### Le Footer
 
 Profitons de cet instant pour insérer notre bas de page
@@ -1380,3 +1386,40 @@ footer {
 Et notez que nous avons ajouter à #mmaincontent la class p-0 pourqu'il n'y ai pas d'espace interne et que le footer colle bien sur les bords.
 
 ### Le Main
+
+Le main est la partie centrale ou nous afficherons le contenue. nous avons deux le choix entre utiliser la totalité de l'espace ce qui veut à peu près dire fournir une approche métro mais sans aucun espacement entre les fenêtres (ce qu'on appel `gutter`), la possibilité d'insérer l'ensemble dans un conteneur ayant un espacement / margin entre les élements, ou encore faire un mix des deux.
+
+On va partir sur un mix des deux, autant donner la possibilité de faire soit l'un soit l'autre. 
+
+Avant de continuer, la zone qui regroupe le contenu et le footer sera modifier en div et celle qui aura le contenu sera une balise main avec l'id "content"
+
+> ATTENTION: Pour ce qui suit, lorsqu'on parle de page, il s'agira de la zone main
+
+
+#### Le breadcrumb ou fil d'ariane
+
+Nous allons placer notre fil d'ariane en haut de la page, en recopiant simplement un code de fil d'ariane sur la documentation de bootstrap nous aurons en zone centrale le code suivant:
+
+```
+<!-- Main content -->
+<div id="maincontent" class="col-md-10 offset-md-2 border-top p-0" style="height:200px;position:relative;">
+    <main id="content">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+        </nav> 
+    </main>	
+    <footer class="bg-light border-top">
+        <div class="container">
+            <div class="text-muted text-center">Please <span class="text-danger">❤❤❤</span> No matter how small your contribution is, never stop sharing your knowledge with the world! <hr> - <a href="https://github.com/Benfarhat">Benfarhat</a> - </div>
+        </div>
+    </footer>
+
+</div>
+<!-- /Main content -->
+```
+
+

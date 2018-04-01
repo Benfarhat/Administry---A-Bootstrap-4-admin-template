@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Administry | A Simple Bootstrap Admin Template</title>
 </head>
-<body style="padding-top:46px;">
+<body style="padding-top:4.3em;">
     <!-- Header -->
     <header>
         <div class="bg-dark collapse" id="ConnexionHeadertop" style="">
@@ -60,7 +60,7 @@
         </div>
 
         <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light p-0">
-            <a class="navbar-brand col-md-2 mr-0" href="#">Administry</a>
+            <a class="navbar-brand col-md-2 mr-0" href="#"><img src="/images/logo.png"> Administry</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -177,18 +177,18 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#AboutHeadertop" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide down 1</a>
+                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#AboutHeadertop" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation"><i class="fa fa-angle-double-down"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#ConnexionHeadertop" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide down 2</a>
+                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#ConnexionHeadertop" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation"><i class="fa fa-angle-double-down"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#ConnexionHeaderbottom" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">Slide Up</a>
+                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#ConnexionHeaderbottom" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation"><i class="fa fa-angle-double-up"></i></a>
                     </li>
                     
                     <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Formulaire
+                                <img class="rounded-circle border grayscale" src="http://placeimg.com/36/36/people">
                             </a>
                             <div class="dropdown-menu double rounded-0 dropdown-menu-right animated fadeIn" aria-labelledby="navbarDropdown">
                                 <div class="p-2">
@@ -212,27 +212,7 @@
                 </ul>
             </div>
         </nav>   
-        <div class="bg-dark collapse" id="ConnexionHeaderbottom" style="">
-            <div class="container">
-                <div class="row">
-                <div class="col-sm-4 col-md-4 offset-md-4 offset-sm-4 py-4">
-                    <h4 class="text-white">Connexion</h4>
-                    <form class="form-signin">
-                        <label for="inputEmail" class="sr-only">Email address</label>
-                        <input id="inputEmail" class="form-control rounded-0 mb-2" placeholder="Email address" required="" autofocus="" type="email">
-                        <label for="inputPassword" class="sr-only">Password</label>
-                        <input id="inputPassword" class="form-control rounded-0" placeholder="Password" required="" type="password">
-                        <div class="checkbox mb-3">
-                            <label class="text-white">
-                            <input value="remember-me" type="checkbox"> Se rappeler de moi
-                            </label>
-                        </div>
-                        <button class="btn btn-lg btn-primary btn-block rounded-0" type="submit">Entrer</button>
-                    </form>
-                </div>
-                </div>
-            </div>
-        </div>
+
     </header>
     <!-- /Header -->
 
@@ -240,8 +220,8 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <nav id="sidebar" class="col-md-2 sidebar" data-simplebar>
-                <div class="sidebar-section">
+            <aside id="sidebar" class="col-md-2 sidebar" data-simplebar>
+                <nav class="sidebar-section">
                     <div class="sidebar-header">Menu 1</div>
                     <ul>
                         <li><a href="#"><i class="fa fa-circle"></i><span>Tableau de bord</span></a></li>
@@ -249,7 +229,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle withbadge" href="#" id="navbarDropdown" role="button" data-toggle="collapse" data-target="#sousmenu1">
                                 <i class="fa fa-circle"></i>Dropdown<span class="badge badge-info rounded-0">3</a>
-                            </a>
+                                </a>
                             <div class="collapse" id="sousmenu1">
                                 <a class="dropdown-item" href="#">Action</a>
                                 <a class="dropdown-item" href="#">Another action</a>
@@ -267,9 +247,9 @@
                         </li>
                         <li><a href="#"><i class="fa fa-circle"></i><span>Tables</span></a></li>
                     </ul>
-                </div> 
+                </nav> 
 
-                <div class="sidebar-section">
+                <nav class="sidebar-section">
                     <div class="sidebar-header">Menu 2</div>
                     <ul>
                         <li class="nav-item dropdown">
@@ -286,9 +266,9 @@
                         <li><a href="#"><i class="fa fa-circle"></i><span>Statistiques</span></a></li>
                         <li><a href="#"><i class="fa fa-circle"></i><span>Tables</span></a></li>
                     </ul>
-                </div> 
+                </nav> 
 
-                <div class="sidebar-section">
+                <nav class="sidebar-section">
                     <div class="sidebar-header">Menu 3</div>
                     <ul>
                         <li><a href="#"><i class="fa fa-circle"></i><span>Tableau de bord</span></a></li>
@@ -296,7 +276,7 @@
                         <li><a href="#"><i class="fa fa-circle"></i><span>Statistiques</span></a></li>
                         <li><a href="#"><i class="fa fa-circle"></i><span>Tables</span></a></li>
                     </ul>
-                </div>
+                </nav>
 
                 <div class="sidebar-section">
                     <ul class="nav nav-tabs row" id="myTab" role="tablist">
@@ -352,64 +332,77 @@
                         </div>
                     </div>
                 </div>
-            </nav>
+            </aside>
             <!-- /Sidebar -->
             <!-- Main content -->
-            <main id="maincontent" class="col-md-10 offset-md-2 border-top p-0" style="height:200px;position:relative;">
-                    Content
-                    <br>
-                    <br>
-                    content
-                    Content
-                    <br>
-                    <br>
-                    content
-                    Content
-                    <br>
-                    <br>
-                    content
+            <div id="maincontent" class="col-md-10 offset-md-2 border-togp p-0">
+                <main id="content" class="container-fluid p-0">
+                    <!-- Collapsed and show on menu click >> Here, div will have the same width than Main -->
+                    <div class="bg-dark collapse" id="ConnexionHeaderbottom" style="">
+                        <div class="container">
+                            <div class="row">
+                            <div class="col-sm-4 col-md-4 offset-md-4 offset-sm-4 py-4">
+                                <h4 class="text-white">Connexion</h4>
+                                <form class="form-signin">
+                                    <label for="inputEmail" class="sr-only">Email address</label>
+                                    <input id="inputEmail" class="form-control rounded-0 mb-2" placeholder="Email address" required="" autofocus="" type="email">
+                                    <label for="inputPassword" class="sr-only">Password</label>
+                                    <input id="inputPassword" class="form-control rounded-0" placeholder="Password" required="" type="password">
+                                    <div class="checkbox mb-3">
+                                        <label class="text-white">
+                                        <input value="remember-me" type="checkbox"> Se rappeler de moi
+                                        </label>
+                                    </div>
+                                    <button class="btn btn-lg btn-primary btn-block rounded-0" type="submit">Entrer</button>
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Collapsed and show on menu click -->
 
-                    <div class="demo1" data-simplebar>
-                            <h2>Scroll me!</h2>
-                            <p>Some more content</p>
-                            <p class="odd">Some content</p>
-                            <p>Some more content</p>
-                            <p class="odd">Some content</p>
-                            <p>Some more content</p>
-                            <p class="odd">Some content</p>
-                            <p>Some more content</p>
-                            <p class="odd">Scroll me!</p>
-                            <p>Some more content</p>
-                            <p class="odd">Some content</p>
-                            <p>Some more content</p>
-                            <p class="odd">Some content</p>
-                            <p>Some more content</p>
-                            <p class="odd">Some content</p>
-                            <p>Some more content</p>
-                            <p class="odd">Scroll me!</p>
-                            <p>Some more content</p>
-                            <p class="odd">Some content</p>
-                            <p>Some more content</p>
-                            <p class="odd">Some content</p>
-                            <p>Some more content</p>
-                            <p class="odd">Some content</p>
-                            <p>Some more content</p>
-                            <p class="odd">Some content</p>
-                            <p>Some more content</p>
-                            <p class="odd">Some content</p>
-                            <p>Some more content</p>
-                hey!
-                          </div>	
+                    <div class="row bg-light border-bottom p-0">
+                        <nav aria-label="breadcrumb" class="col-md-8">
+                            <ol class="breadcrumb bg-light">
+                                <li class="breadcrumb-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#">Library</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Data
+                                </li>
+                            </ol>
+                        </nav>
+                        <ul class="nav col-md-4 justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">sec menu 1</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    sec menu 2
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right rounded-0 animated flipInX" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Sort</a>
+                                <a class="dropdown-item" href="#">Filter</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Search</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> 
+                </main>	
                 <footer class="bg-light border-top">
                     <div class="container">
                         <div class="text-muted text-center">Please <span class="text-danger">❤❤❤</span> No matter how small your contribution is, never stop sharing your knowledge with the world! <hr> - <a href="https://github.com/Benfarhat">Benfarhat</a> - </div>
                     </div>
                 </footer>
 
-            </main>
+            </div>
             <!-- /Main content -->
         </div>
-    </div>
+    </div> 
     <!-- /Content -->
 
     <!-- jQuery first -->
