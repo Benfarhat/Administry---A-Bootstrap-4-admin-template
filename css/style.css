@@ -56,7 +56,7 @@ header .dropdown-toggle.withbadge{
     position: relative;
 }
 header .dropdown-toggle.withbadge::after, .sidebar .dropdown-toggle.withbadge::after{
-    border: none;
+    border: none !important;
     width :4px;
 }
 header .dropdown-toggle .badge{
