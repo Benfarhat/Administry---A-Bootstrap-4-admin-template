@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Benfarhat/Tuto-bootstrap-admin-template#readme",
   "devDependencies": {
+    "css-flip": "^0.5.0",
     "live-server": "^1.2.0"
   }
 }

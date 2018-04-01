@@ -4,7 +4,7 @@
 - [x] La flèche du dropdown de la sidebar ne correspond pas à l'action en cours
 - [x] Près du badge, la flèche ne doit pas réapparaitre après fermeture du sous menu
 - [ ] Péférer la disposition flex pour la sidebar (voir support des browsers)
-- [ ] Mettre en place un fichier de thème pour personalisation
+- [ ] Mettre en place un fichier de thème pour personalisation (https://developer.mozilla.org/fr/docs/Web/CSS/--*#Browser_compatibility)
 - [ ] Ajouter quelques pages particulières:
     - [ ] Login
     - [ ] Register
