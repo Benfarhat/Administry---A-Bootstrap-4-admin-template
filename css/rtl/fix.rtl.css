@@ -1,0 +1,6 @@
+body{
+  direction:rtl;
+}
+.simplebar-scroll-content {
+  overflow-y: hidden;
+}

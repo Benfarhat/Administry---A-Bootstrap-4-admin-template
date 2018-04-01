@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "live-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-rtl1": "css-flip ./css/bootstrap.css > ./css/rtl/bootstrap.rtl.css",
+    "build-rtl2": "css-flip ./css/simplebar.css > ./css/rtl/simplebar.rtl.css",
+    "build-rtl3": "css-flip ./css/style.css > ./css/rtl/style.rtl.css"
   },
   "repository": {
     "type": "git",

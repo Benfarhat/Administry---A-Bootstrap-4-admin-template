@@ -195,10 +195,10 @@ header .navbar-nav>li>a {
 @media (min-width: 992px) {
     .dropdown-menu.double{
         min-width: 20rem
-    };
+    }
     .dropdown-menu.triple{
         min-width: 30rem
-    };
+    }
 }
 
 /* Sidebar */
