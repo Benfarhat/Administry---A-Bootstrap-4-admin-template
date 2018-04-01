@@ -347,6 +347,12 @@ main .dropdown-menu{
     color: #218c74
 }
 
+/* Flatify */
+
+.btn, .alert, .badge, .card, .input, textarea, .modal, .nav, .navbar, .progress{
+    border-radius: 0 !important;
+}
+
 /* Debug */
 
 .debug-r{
