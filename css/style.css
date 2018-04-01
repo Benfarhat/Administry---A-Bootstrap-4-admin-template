@@ -11,6 +11,12 @@ img.grayscale:hover {
     filter: grayscale(100%);
 }
 
+/* dropdown-menu-right */
+
+.dropdown-menu-right{
+    right: 0;
+    left: auto !important;
+}
 /* Header */
 
 header{
@@ -62,7 +68,6 @@ header .dropdown-toggle .badge{
 header .navbar-brand{
     background-color: #218c74;
     color:#fff !important;
-    text-align: center;
     padding-top: .5rem;
     padding-bottom: .5rem;
     line-height: 2.2em;
