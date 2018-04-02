@@ -1,6 +1,8 @@
 body{
   direction:rtl;
 }
+
+/* Le principe est de cacher la scrollbar pour qu'elle soit cachée */
 .simplebar-scroll-content {
   direction: ltr; /* Permet de garder la scroll bar dans une zone caché, de plus ne fonctionne que lorsque simplebar est actif */
   /* ou alors mettre le code suivant:
@@ -9,4 +11,8 @@ body{
     margin-bottom: -34px;
     margin-left: -20px;
   */
+}
+/* Seule la div de la sidebar doit être ltr sinon les icones, les onglets, les listes, etc... seront retournés */
+.simplebar-scroll-content *{
+  direction: rtl;
 }
