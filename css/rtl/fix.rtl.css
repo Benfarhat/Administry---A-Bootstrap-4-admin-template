@@ -2,5 +2,11 @@ body{
   direction:rtl;
 }
 .simplebar-scroll-content {
-  overflow-y: hidden;
+  direction: ltr; /* Permet de garder la scroll bar dans une zone caché, de plus ne fonctionne que lorsque simplebar est actif */
+  /* ou alors mettre le code suivant:
+    margin-right: -3px;
+    padding-right: 20px;
+    margin-bottom: -34px;
+    margin-left: -20px;
+  */
 }
