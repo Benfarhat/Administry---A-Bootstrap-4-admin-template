@@ -5,7 +5,7 @@
 - [x] Près du badge, la flèche ne doit pas réapparaitre après fermeture du sous menu
 - [ ] Péférer la disposition flex pour la sidebar (voir support des browsers)
 - [ ] Mettre en place un fichier de thème pour personalisation (https://developer.mozilla.org/fr/docs/Web/CSS/--*#Browser_compatibility)
-- [ ] Corriger l'affichage sur mobile.
+- [x] Corriger l'affichage sur mobile.
 - [ ] Ajouter quelques pages particulières:
     - [ ] Login
     - [ ] Register
