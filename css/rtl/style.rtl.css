@@ -89,15 +89,16 @@ header .navbar-brand {
 }
 
 /* Permet d'avoir une couleur de bordure de fond du brand différent du reste de la navbar */
-
-header nav.navbar::after {
-  background: linear-gradient(to right, #dee2e6 83.333%,#218c74 83.334%);
-  position: absolute;
-  content: '';
-  height: 1px;
-  left: 0;
-  right: 0;
-  bottom: -1px;
+@media (min-width: 768px) {
+  header nav.navbar::after {
+    background: linear-gradient(to right, #dee2e6 83.333%,#218c74 83.334%);
+    position: absolute;
+    content: '';
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+  }
 }
 
 header .navbar-nav li {
