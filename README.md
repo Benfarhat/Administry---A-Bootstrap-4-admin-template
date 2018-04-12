@@ -1,6 +1,6 @@
 # Création d'un thème d'administration avec Bootstrap 4
 
-[DEMO](https://benfarhat.github.io/Tuto-bootstrap-admin-template/)
+[DEMO](https://benfarhat.github.io/Administry---A-Bootstrap-4-admin-template/)
 
 - [Création d'un thème d'administration avec Bootstrap 4](#cr%C3%A9ation-dun-th%C3%A8me-dadministration-avec-bootstrap-4)
     - [Démarrage](#d%C3%A9marrage)

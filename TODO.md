@@ -5,6 +5,7 @@
 - [x] Près du badge, la flèche ne doit pas réapparaitre après fermeture du sous menu
 - [ ] Péférer la disposition flex pour la sidebar (voir support des browsers)
 - [ ] Mettre en place un fichier de thème pour personalisation (https://developer.mozilla.org/fr/docs/Web/CSS/--*#Browser_compatibility)
+- [x] Corriger l'affichage sur mobile.
 - [ ] Ajouter quelques pages particulières:
     - [ ] Login
     - [ ] Register
@@ -15,9 +16,9 @@
 - [ ] Inclure plus de police de caractères
 - [ ] Inclure d'autres icones
 - [ ] Améliorer le code - compatibilité avec le guide de [mdo](http://pixelastic.github.io/code-guide/) pour une meilleure lisibilité
-- [ ] Interface RTL
+- [x] Interface RTL
     - [x] Génération des fichiers de styles
-    - [ ] Ecriture des fixes >> Problème détecté au niveau du breadcrumbs
+    - [x] Ecriture des fixes >> Problème détecté au niveau du breadcrumbs
     - [x] Vérification compatibilité avec les scripts externes (notamment simplebar)
 - [ ] Vérifier que la licence permet la réutilisation et modification gratuite
 - [ ] Minifier le code css
