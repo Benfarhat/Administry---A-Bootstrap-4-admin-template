@@ -5,10 +5,17 @@ $(function(){
         $( "#sidebar" ).toggleClass( "d-none" );
         $( "#maincontent" ).toggleClass( "col-md-10 offset-md-2" ).toggleClass( "col-md-12" );
     });
+
+    
  
  });
 
-
+ $(document).ready(function() {
+    jQuery('.fadeOutOnload').fadeOut('slow').addClass('d-none');
+    //$('.fadeInOnload').show('normal');
+    /*$('div').removeClass('hidden');
+    $('div').fadeIn(1000);*/
+});
 
   
 /* Version javascript */
