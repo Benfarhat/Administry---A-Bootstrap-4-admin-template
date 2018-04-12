@@ -11,10 +11,10 @@ $(function(){
  });
 
  $(document).ready(function() {
-    jQuery('.fadeOutOnload').fadeOut('slow').addClass('d-none');
-    //$('.fadeInOnload').show('normal');
-    /*$('div').removeClass('hidden');
-    $('div').fadeIn(1000);*/
+    var s = document.querySelector('.fadeOutOnload').style;
+    s.opacity = 1;
+    var speed = 80;  // lower is faster - Recommanded value: from 40 to 120
+    (function fade(){(s.opacity-=.1)<0?s.display="none":setTimeout(fade,speed)})();
 });
 
   
