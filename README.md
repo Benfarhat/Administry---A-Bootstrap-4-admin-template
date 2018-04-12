@@ -4,6 +4,7 @@
 
 - [Création d'un thème d'administration avec Bootstrap 4](#cr%C3%A9ation-dun-th%C3%A8me-dadministration-avec-bootstrap-4)
     - [Démarrage](#d%C3%A9marrage)
+            - [Version finale](#version-finale)
         - [Intégrité des sous ressources](#int%C3%A9grit%C3%A9-des-sous-ressources)
         - [Position des balises styles et script](#position-des-balises-styles-et-script)
         - [Mise en cache et compression](#mise-en-cache-et-compression)
@@ -76,6 +77,20 @@ Les fichiers de scripts: JS, Popper.js, et jQuery
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+```
+#### Version finale
+
+Vous aurez finalement besoin également d'un script qui gèrera le scroll de la sidebar, voici le code final de la partie utilisant un CDN (un lien vers des assets / scripts hébergés en externe)
+
+```
+    <!-- jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- simple Scrollbar -->
+    <script src="https://unpkg.com/simplebar@2.3.1/dist/simplebar.js"></script>
 ```
 
 ### Intégrité des sous ressources
